@@ -5,6 +5,7 @@ import NewPasswordPage from "./auth/newPasswordPage";
 import ResetPassword from "./auth/passwordReset";
 import SignUp from "./auth/signup";
 import Sidebar from "./builder/Sidebar";
+import WelcomeScreen from "./auth/welcome";
 import Dashboard from "./dashboard";
 
 function Application() {
@@ -13,12 +14,10 @@ function Application() {
       <React.Fragment>
         <div>
           <Routes>
-            <Route path="/" element={<Login />} />
-            <Route path="/auth/app/Signup" element={<SignUp />} />
-            <Route
-              path="/auth/app/Reset-password"
-              element={<ResetPassword />}
-            />
+            <Route path="/" element={<WelcomeScreen />} />
+            <Route path="/auth/login" element={<Login />} />
+            <Route path="/auth/register" element={<SignUp />} />
+            <Route path="/auth/reset" element={<ResetPassword />} />
             <Route
               path="/auth/app/Set-new-password"
               element={<NewPasswordPage />}

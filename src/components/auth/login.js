@@ -85,11 +85,11 @@ const Login = () => {
             </label>
           </div>
           <div>
-            <a
-              href="home.html"
-              class="btn btn-info btn-lg w-100 rounded-4 mb-2">
+            <Link
+              to="/app/dashboard"
+              className="btn btn-info btn-lg w-100 rounded-4 mb-2">
               Login
-            </a>
+            </Link>
             <div class="d-flex justify-content-between mt-2">
               <a
                 href="forget-password.html"

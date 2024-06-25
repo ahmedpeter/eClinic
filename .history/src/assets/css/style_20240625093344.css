@@ -60,7 +60,7 @@ body {
 .available-doctor,
 .recent-doctors {
   opacity: 1;
-  /* visibility: hidden; */
+  visibility: hidden;
   transition: opacity 1s ease;
   -webkit-transition: opacity 1s ease;
 }

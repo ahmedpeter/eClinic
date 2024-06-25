@@ -103,6 +103,60 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
+              <div className="available-doctor-item">
+                <div className="btn-info text-white rounded-4 p-3 doctor-book-back">
+                  <h1 className="mb-1 doctor-book-back-title">
+                    <span className="h4 overflow-hidden m-0">
+                      <b className="text-primary">Find Your Dental</b>
+                    </span>
+                    Specialist Doctor
+                  </h1>
+                  <p className="mb-2 small">
+                    Dr. Samaro
+                    <span className="bg-white rounded-pill px-1 small text-orange">
+                      <i className="mdi mdi-star"></i> 4.9
+                    </span>
+                  </p>
+                  <a
+                    href="home.html#"
+                    className="btn btn-sm btn-primary btn-book">
+                    BOOK NOW <i className="bi bi-arrow-right"></i>
+                  </a>
+                  <div className="doctor-book-img">
+                    <img
+                      src="img/home/available-doctor-3.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="available-doctor-item">
+                <div className="btn-secondary text-white rounded-4 p-3 doctor-book-back">
+                  <h1 className="mb-1 doctor-book-back-title">
+                    Find the Right <br />
+                    <span className="h4 text-warning overflow-hidden rounded-4 m-0">
+                      <b className="bg-warning text-black px-1 rounded">
+                        Doctor for Your
+                      </b>
+                      <b className="text-black">Needs!</b>
+                    </span>
+                  </h1>
+                  <p className="mb-2 text-white small">
+                    Book Now and Get 30% OFF
+                  </p>
+                  <a href="home.html#" className="btn btn-sm btn-dark btn-book">
+                    BOOK NOW <i className="bi bi-arrow-right"></i>
+                  </a>
+                  <div className="doctor-book-img">
+                    <img
+                      src="img/home/available-doctor-2.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="p-3 mb-2">
@@ -159,7 +213,7 @@ const Dashboard = () => {
           </div>
 
           {/* Top Doctor New */}
-          <div className="p-3" style={{ marginBottom: 25 }}>
+          <div className="p-3" style={{ marginBottom: 10 }}>
             <h6 className="mb-2 pb-2 fw-bold text-black">Top Doctor</h6>
             <div className="row row-cols-2 g-3">
               <div className="col">

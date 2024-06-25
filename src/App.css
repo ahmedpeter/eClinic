@@ -24,6 +24,12 @@
   color: white;
 }
 
+.banner_splash {
+  background: url("./assets/img/gallery/gallery-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
 .App-link {
   color: #61dafb;
 }
