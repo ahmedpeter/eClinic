@@ -1,48 +1,34 @@
 import { Link } from "react-router-dom";
+import { importAllImages } from "../util/imageImporter";
+
+const images = importAllImages();
 
 const SignUp = () => {
-  const onEnter = (e) => {
-    e.stopPropagation();
-    if (e.key === "Enter") {
-      console.log("enter pressed");
-    }
-  };
-
   return (
     <section>
       <div class="sign-in p-4">
-        <div class="d-flex align-items-start justify-content-between mb-4">
+        <div
+          class="align-items-start justify-content-between mb-4"
+          style={{ textAlign: "center", marginTop: 20 }}>
           <div>
-            <span class="mdi mdi-account-plus-outline display-1 text-primary"></span>
+            <img src={images["logo.svg"]} alt="" class="img-fluid logo" />
             <h2 class="my-3 fw-bold">Getting Started</h2>
             <p class="text-muted mb-0">Create an account to continue!</p>
           </div>
-          <a
-            class="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center fs-5"
-            href="sign-up.html#">
-            <i class="bi bi-list fs-3 d-flex"></i>
-          </a>
         </div>
-        <form>
+        <form style={{ marginTop: 80 }}>
           <div class="mb-3">
             <label for="exampleFormControlEmail" class="form-label mb-1">
               Email
             </label>
-            <div
-              class="input-group border bg-white rounded-3 py-1"
-              id="exampleFormControlEmail">
-              <span
-                class="input-group-text bg-transparent rounded-0 border-0"
-                id="mail">
+            <div class="input-group border bg-white rounded-3 py-1">
+              <span class="input-group-text bg-transparent rounded-0 border-0">
                 <span class="mdi mdi-email-outline mdi-18px text-muted"></span>
               </span>
               <input
                 type="email"
                 class="form-control bg-transparent rounded-0 border-0 px-0"
                 placeholder="Type your email or phone"
-                aria-label="Type your email or phone"
-                aria-describedby="mail"
-                value="singh@email.com"
               />
             </div>
           </div>
@@ -50,21 +36,14 @@ const SignUp = () => {
             <label for="exampleFormControlName" class="form-label mb-1">
               Name
             </label>
-            <div
-              class="input-group border bg-white rounded-3 py-1"
-              id="exampleFormControlName">
-              <span
-                class="input-group-text bg-transparent rounded-0 border-0"
-                id="name">
+            <div class="input-group border bg-white rounded-3 py-1">
+              <span class="input-group-text bg-transparent rounded-0 border-0">
                 <span class="mdi mdi-account-circle-outline mdi-18px text-muted"></span>
               </span>
               <input
                 type="text"
                 class="form-control bg-transparent rounded-0 border-0 px-0"
                 placeholder="Type your name"
-                aria-label="Type your name"
-                aria-describedby="name"
-                value="Singh"
               />
             </div>
           </div>
@@ -72,21 +51,14 @@ const SignUp = () => {
             <label for="exampleFormControlPassword" class="form-label mb-1">
               Password
             </label>
-            <div
-              class="input-group border bg-white rounded-3 py-1"
-              id="exampleFormControlPassword">
-              <span
-                class="input-group-text bg-transparent rounded-0 border-0"
-                id="password">
+            <div class="input-group border bg-white rounded-3 py-1">
+              <span class="input-group-text bg-transparent rounded-0 border-0">
                 <span class="mdi mdi-lock-outline mdi-18px text-muted"></span>
               </span>
               <input
                 type="password"
                 class="form-control bg-transparent rounded-0 border-0 px-0"
                 placeholder="Type your password"
-                aria-label="Type your password"
-                aria-describedby="password"
-                value="123456789"
               />
             </div>
           </div>
@@ -101,19 +73,15 @@ const SignUp = () => {
               Remember Me
             </label>
           </div>
-          <div>
-            <a
-              class="btn btn-info btn-lg w-100 rounded-4 mb-3"
-              data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasBottomCountry"
-              aria-controls="offcanvasBottomCountry">
+          <div style={{ marginTop: 50 }}>
+            <Link to="/auth/login" className="btn btn-info btn-lg w-100 mb-3">
               Create Account
-            </a>
+            </Link>
             <p class="text-muted text-center small">
               Already have an account?
-              <a class="text-primary" href="sign-in.html">
+              <Link to="/auth/login" class="text-primary">
                 Sign In
-              </a>
+              </Link>
             </p>
           </div>
         </form>

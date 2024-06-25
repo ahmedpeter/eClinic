@@ -1,6 +1,5 @@
 import * as React from "react";
-import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import { importAllImages } from "../util/imageImporter";
 
 const images = importAllImages();
@@ -25,23 +24,6 @@ const Dashboard = () => {
                   Hey, Queen Aina!
                 </p>
               </div>
-            </div>
-            <div className="d-flex align-items-center gap-2">
-              <a
-                href="favorite-doctor.html"
-                className="bg-white shadow rounded-circle icon">
-                <span className="mdi mdi-cards-heart-outline mdi-18px text-primary"></span>
-              </a>
-              <a
-                href="notification.html"
-                className="bg-white shadow rounded-circle icon">
-                <span className="mdi mdi-bell-outline mdi-18px text-primary"></span>
-              </a>
-              <a
-                className="toggle bg-white shadow rounded-circle icon d-flex align-items-center justify-content-center"
-                href="home.html#">
-                <i className="bi bi-list text-primary fs-5 d-flex"></i>
-              </a>
             </div>
           </div>
           <div className="px-3 pb-3">
@@ -89,11 +71,11 @@ const Dashboard = () => {
                   <p className="mb-2 text-white-50 small">
                     Book Now and Get 30% OFF
                   </p>
-                  <a
-                    href="request-appointment.html"
+                  <Link
+                    to="/patient/6/new_appointment/step1"
                     className="btn btn-sm btn-book btn-secondary">
                     BOOK NOW <i className="bi bi-arrow-right"></i>
-                  </a>
+                  </Link>
                   <div className="doctor-book-img">
                     <img
                       src={images["available-doctor-1.png"]}
@@ -109,26 +91,26 @@ const Dashboard = () => {
             <div className="row row-cols-4 g-2">
               <div className="col">
                 <div className="bg-white text-center rounded-4 p-2 shadow-sm">
-                  <a href="search.html" className="link-dark">
+                  <Link to="/consultants" className="link-dark">
                     <img
                       src={images["doctor.png"]}
                       alt=""
                       className="img-fluid px-2"
                     />
                     <p className="text-truncate small pt-2 m-0">Doctor</p>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col">
                 <div className="bg-white text-center rounded-4 p-2 shadow-sm">
-                  <a href="request-appointment.html" className="link-dark">
+                  <Link to="/appointment/con/4/pat/9/300" className="link-dark">
                     <img
                       src={images["schedule.png"]}
                       alt=""
                       className="img-fluid px-2"
                     />
                     <p className="text-truncate small pt-2 m-0">Appointment</p>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col">
@@ -478,26 +460,26 @@ const Dashboard = () => {
       {/* Nav */}
       <div class="footer mt-auto fix-osahan-footer">
         <div class="d-flex align-items-center justify-content-between rounded-4 shadow overflow-hidden bottom-nav-main">
-          <a href="home.html" class="col footer-bottom-nav active">
+          <Link to="/app/dashboard" class="col footer-bottom-nav active">
             <span class="mdi mdi-home-variant-outline mdi-24px"></span>
             <span>Home</span>
-          </a>
-          <a href="search.html" class="col footer-bottom-nav">
+          </Link>
+          <Link to="" class="col footer-bottom-nav">
             <span class="mdi mdi-magnify mdi-24px"></span>
             <span>Search</span>
-          </a>
-          <a href="video.html" class="col footer-bottom-nav">
+          </Link>
+          <Link to="/messages" class="col footer-bottom-nav">
             <span class="mdi mdi-video-outline mdi-24px"></span>
             <span>Video</span>
-          </a>
-          <a href="message.html" class="col footer-bottom-nav">
+          </Link>
+          <Link to="/messages" class="col footer-bottom-nav">
             <span class="mdi mdi-message-processing-outline mdi-24px"></span>
             <span>Chat</span>
-          </a>
-          <a href="my-profile.html" class="col footer-bottom-nav">
+          </Link>
+          <Link to="/profile/12" class="col footer-bottom-nav">
             <span class="mdi mdi-account-outline mdi-24px"></span>
             <span>Profile</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -18,6 +18,9 @@ import UpdateUserProfile from "./shared/updateProfile";
 import MakeAppointment_1 from "./appointment/newAppointment_1";
 import MakeAppointment_2 from "./appointment/newAppointment_2";
 import MakeAppointment_3 from "./appointment/newAppointment_3";
+import SplashScreen from "./splash";
+import ForgotPassword from "./auth/forgotPassword";
+import Consultants from "./consultant/consultants";
 
 function Application() {
   return (
@@ -25,9 +28,11 @@ function Application() {
       <React.Fragment>
         <div>
           <Routes>
-            <Route path="/" element={<WelcomeScreen />} />
+            <Route path="/" element={<SplashScreen />} />
+            <Route path="/auth" element={<WelcomeScreen />} />
             <Route path="/auth/login" element={<Login />} />
             <Route path="/auth/register" element={<SignUp />} />
+            <Route path="/auth/forgot" element={<ForgotPassword />} />
             <Route path="/auth/reset" element={<ResetPassword />} />
             <Route
               path="/auth/app/Set-new-password"
@@ -55,6 +60,7 @@ function Application() {
                 />
                 <Route path="/messages/chat" element={<Chats />} />
                 <Route path="/messages" element={<MessageInbox />} />
+                <Route path="/consultants" element={<Consultants />} />
                 <Route path="/profile/:id" element={<UserProfile />} />
                 <Route path="/patient/:id/history" element={<History />} />
                 <Route
