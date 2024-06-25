@@ -476,7 +476,7 @@ const Dashboard = () => {
         </div>
       </div>
       {/* Nav */}
-      <div class="footer mt-auto p-3 fix-osahan-footer">
+      <div class="footer mt-auto fix-osahan-footer">
         <div class="d-flex align-items-center justify-content-between rounded-4 shadow overflow-hidden bottom-nav-main">
           <a href="home.html" class="col footer-bottom-nav active">
             <span class="mdi mdi-home-variant-outline mdi-24px"></span>
